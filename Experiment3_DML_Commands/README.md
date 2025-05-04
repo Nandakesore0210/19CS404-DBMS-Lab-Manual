@@ -50,7 +50,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 Write a SQL query to Delete a Specific Surgery whose ID is 3 or surgeon ID is 4.
 Sample table: Surgeries
 
-```
+```sql
 DELETE FROM Surgeries
 WHERE surgery_id= 3 OR surgery_id= 4;
 ```
@@ -64,7 +64,7 @@ WHERE surgery_id= 3 OR surgery_id= 4;
 Write a SQL query to Retrieve the department name and location concatenated with a comma
 Table name: dept
 
-```
+```sql
 SELECT
 dname||', '||loc AS dept_location
 FROM dept;
@@ -78,7 +78,7 @@ FROM dept;
 
 Write a query to fetch 5 to 9 records from EmployeeInfo table.
 
-```
+```sql
 SELECT *
 FROM EmployeeInfo
 ORDER BY EmpID
@@ -94,7 +94,7 @@ LIMIT 5 OFFSET 4;
 Write a SQL query to find customers who are from the city 'London' who have a grade greater than 200. Return customer_id, cust_name, city, grade, and salesman_id.
 Sample table: customer
 
-```
+```sql
 SELECT 
 customer_id,
 cust_name,
@@ -114,7 +114,7 @@ WHERE city IN ('London') AND grade>200;
 Write a SQL query to Delete a Specific Surgery whose ID is 3
 Sample table: Surgeries
 
-```
+```sql
 DELETE FROM Surgeries
 WHERE surgery_id=3;
 ```
@@ -127,7 +127,7 @@ WHERE surgery_id=3;
 
 Write a SQL query to retrieve the year, month, and day from the hiredate column in the emp table.
 
-```
+```sql
 SELECT
 strftime('%Y',hiredate) AS Year,
 strftime('%m',hiredate) AS Month,
@@ -144,7 +144,7 @@ FROM emp;
 Write a SQL query to Delete customers from 'customer' table where 'WORKING_AREA' is 'New York'.
 Sample table: Customer
 
-```
+```sql
 DELETE FROM Customer
 WHERE WORKING_AREA IN ("New York");
 ```
@@ -158,7 +158,7 @@ WHERE WORKING_AREA IN ("New York");
 For  Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
 PRODUCTS TABLE
 
-```
+```sql
 UPDATE sales
 SET sell_price=sell_price+3
 WHERE product_id IN(
@@ -179,7 +179,7 @@ Write a SQL query to remove rows from the table 'customer' with the following co
 2. 'cus_city' must not be 'Chennai',
 Sample table: Customer
 
-```
+```sql
 DELETE FROM Customer
 WHERE CUST_COUNTRY IN ('India') AND CUST_CITY NOT IN ('Chennai');
 ```
@@ -193,7 +193,7 @@ WHERE CUST_COUNTRY IN ('India') AND CUST_CITY NOT IN ('Chennai');
 Write a SQL statement to Increase the selling price per unit by 5% for product ID 15 who's sale is on '2023-01-31'.
 sales(sale_id,sale_date,product_id,quantity,sell_price,total_sell_price)
 
-```
+```sql
 UPDATE sales
 SET sell_price=sell_price+(0.05*sell_price)
 WHERE product_id=15 AND sale_date='2023-01-31';
