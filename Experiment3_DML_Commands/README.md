@@ -46,10 +46,11 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
+
 Write a SQL query to Delete a Specific Surgery whose ID is 3 or surgeon ID is 4.
 Sample table: Surgeries
 
-```sql
+```
 DELETE FROM Surgeries
 WHERE surgery_id= 3 OR surgery_id= 4;
 ```
@@ -59,17 +60,11 @@ WHERE surgery_id= 3 OR surgery_id= 4;
 ![image](https://github.com/user-attachments/assets/2a4e19c2-b169-4a4c-96e2-df8f9da70872)
 
 **Question 2**
+
 Write a SQL query to Retrieve the department name and location concatenated with a comma
-
 Table name: dept
- 
-name        type
-----------  ----------
-deptno       INT
-dname       VARCHAR(100)
-loc         VARCHAR(100)
 
-```sql
+```
 SELECT
 dname||', '||loc AS dept_location
 FROM dept;
@@ -80,9 +75,10 @@ FROM dept;
 ![image](https://github.com/user-attachments/assets/016ba235-b127-42dc-87a5-89a0fc320061)
 
 **Question 3**
+
 Write a query to fetch 5 to 9 records from EmployeeInfo table.
 
-```sql
+```
 SELECT *
 FROM EmployeeInfo
 ORDER BY EmpID
@@ -94,17 +90,11 @@ LIMIT 5 OFFSET 4;
 ![image](https://github.com/user-attachments/assets/d919d33c-df40-41e6-9532-7578cbbc6e8a)
 
 **Question 4**
-Write a SQL query to find customers who are from the city 'London' who have a grade greater than 200. Return customer_id, cust_name, city, grade, and salesman_id.
 
+Write a SQL query to find customers who are from the city 'London' who have a grade greater than 200. Return customer_id, cust_name, city, grade, and salesman_id.
 Sample table: customer
 
- customer_id |   cust_name    |    city    | grade | salesman_id 
--------------+----------------+------------+-------+-------------
-        3002 | Nick Rimando   | New York   |   100 |        5001
-        3007 | Brad Davis     | New York   |   200 |        5001
-        3005 | Graham Zusi    | California |   200 |        5002
-
-```sql
+```
 SELECT 
 customer_id,
 cust_name,
@@ -120,10 +110,11 @@ WHERE city IN ('London') AND grade>200;
 ![image](https://github.com/user-attachments/assets/616c059e-bb9c-487d-890c-74b655fd4455)
 
 **Question 5**
+
 Write a SQL query to Delete a Specific Surgery whose ID is 3
 Sample table: Surgeries
 
-```sql
+```
 DELETE FROM Surgeries
 WHERE surgery_id=3;
 ```
@@ -133,9 +124,10 @@ WHERE surgery_id=3;
 ![image](https://github.com/user-attachments/assets/6b481314-d3bf-4f9a-8e2c-de2f5426b749)
 
 **Question 6**
+
 Write a SQL query to retrieve the year, month, and day from the hiredate column in the emp table.
 
-```sql
+```
 SELECT
 strftime('%Y',hiredate) AS Year,
 strftime('%m',hiredate) AS Month,
@@ -148,16 +140,11 @@ FROM emp;
 ![image](https://github.com/user-attachments/assets/c60e1f60-ef4f-45e3-8648-4c50d5ff56d5)
 
 **Question 7**
+
 Write a SQL query to Delete customers from 'customer' table where 'WORKING_AREA' is 'New York'.
 Sample table: Customer
-+-----------+-------------+-------------+--------------+--------------+-------+-------------+-------------+-------------+---------------+--------------+------------+  
-|CUST_CODE  | CUST_NAME   | CUST_CITY   | WORKING_AREA | CUST_COUNTRY | GRADE | OPENING_AMT | RECEIVE_AMT | PAYMENT_AMT |OUTSTANDING_AMT| PHONE_NO     | AGENT_CODE |
-+-----------+-------------+-------------+--------------+--------------+-------+-------------+-------------+-------------+---------------+--------------+------------+
-| C00013    | Holmes      | London      | London       | UK           |     2 |     6000.00 |     5000.00 |     7000.00 |       4000.00 | BBBBBBB      | A003       |
-| C00001    | Micheal     | New York    | New York     | USA          |     2 |     3000.00 |     5000.00 |     2000.00 |       6000.00 | CCCCCCC      | A008       |
-| C00020    | Albert      | New York    | New York     | USA          |     3 |     5000.00 |     7000.00 |     6000.00 |       6000.00 | BBBBSBB      | A008       |
 
-```sql
+```
 DELETE FROM Customer
 WHERE WORKING_AREA IN ("New York");
 ```
@@ -167,32 +154,11 @@ WHERE WORKING_AREA IN ("New York");
 ![image](https://github.com/user-attachments/assets/8ac1f3d2-527c-4068-aea5-e4692defb3a3)
 
 **Question 8**
-For  Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
 
+For  Increase the selling price per unit by 3 for all products supplied by supplier ID 4 in the sales table.
 PRODUCTS TABLE
 
-name               type
------------------  ---------------
-product_id         INT
-product_name       VARCHAR(100)
-category           VARCHAR(50)
-cost_price         DECIMAL(10,2)
-sell_price         DECIMAL(10,2)
-reorder_lvl        INT
-quantity           INT
-supplier_id        INT
-
-SALES TABLE
-name               type
------------------  ---------------
-sale_id            INT
-sale_date          DATE
-product_id         INT
-quantity           INT
-sell_price         DECIMAL(10,2)
-total_sell_price   DECIMAL(10,2)
-
-```sql
+```
 UPDATE sales
 SET sell_price=sell_price+3
 WHERE product_id IN(
@@ -207,22 +173,13 @@ WHERE Supplier_id=4
 ![image](https://github.com/user-attachments/assets/804ef491-1b1c-4414-a69d-691da049ff60)
 
 **Question 9**
+
 Write a SQL query to remove rows from the table 'customer' with the following condition -
-
 1. 'cust_country' must be 'India',
-
 2. 'cus_city' must not be 'Chennai',
-
 Sample table: Customer
 
-+-----------+-------------+-------------+--------------+--------------+-------+-------------+-------------+-------------+---------------+--------------+------------+  
-|CUST_CODE  | CUST_NAME   | CUST_CITY   | WORKING_AREA | CUST_COUNTRY | GRADE | OPENING_AMT | RECEIVE_AMT | PAYMENT_AMT |OUTSTANDING_AMT| PHONE_NO     | AGENT_CODE |
-+-----------+-------------+-------------+--------------+--------------+-------+-------------+-------------+-------------+---------------+--------------+------------+
-| C00013    | Holmes      | London      | London       | UK           |     2 |     6000.00 |     5000.00 |     7000.00 |       4000.00 | BBBBBBB      | A003       |
-| C00001    | Micheal     | New York    | New York     | USA          |     2 |     3000.00 |     5000.00 |     2000.00 |       6000.00 | CCCCCCC      | A008       |
-| C00020    | Albert      | New York    | New York     | USA          |     3 |     5000.00 |     7000.00 |     6000.00 |       6000.00 | BBBBSBB      | A008       |
-
-```sql
+```
 DELETE FROM Customer
 WHERE CUST_COUNTRY IN ('India') AND CUST_CITY NOT IN ('Chennai');
 ```
@@ -232,10 +189,11 @@ WHERE CUST_COUNTRY IN ('India') AND CUST_CITY NOT IN ('Chennai');
 ![image](https://github.com/user-attachments/assets/70ac8a87-63b4-4419-a9ad-ffc7c5d8294e)
 
 **Question 10**
+
 Write a SQL statement to Increase the selling price per unit by 5% for product ID 15 who's sale is on '2023-01-31'.
 sales(sale_id,sale_date,product_id,quantity,sell_price,total_sell_price)
 
-```sql
+```
 UPDATE sales
 SET sell_price=sell_price+(0.05*sell_price)
 WHERE product_id=15 AND sale_date='2023-01-31';
@@ -244,6 +202,7 @@ WHERE product_id=15 AND sale_date='2023-01-31';
 **Output:**
 
 ![image](https://github.com/user-attachments/assets/99747ab5-2279-4834-8aab-10336e58a610)
+
 
 ## GRADE:
 
