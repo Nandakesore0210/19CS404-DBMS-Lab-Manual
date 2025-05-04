@@ -42,7 +42,7 @@ Write a SQL query to find the total amount of fruits with a unit type of 'LB'.
 Note: Inventory attribute contains amount of fruits
 Table: fruits
 
-```
+```sql
 SELECT
 SUM(inventory) AS total
 FROM fruits
@@ -58,7 +58,7 @@ WHERE unit LIKE '%LB%';
 Write a SQL query to find how many employees have an income greater than 50K?
 Table: employee
 
-```
+```sql
 SELECT
 COUNT(*) AS employees_count
 FROM employee
@@ -74,7 +74,7 @@ WHERE income>50000;
 Write a SQL query to find  how many employees work in California?
 Table: employee
 
-```
+```sql
 SELECT
 COUNT(*) AS employees_in_california
 FROM employee
@@ -90,7 +90,7 @@ WHERE city='California';
 How many medical records does each doctor have?
 Sample table:MedicalRecords Table
 
-```
+```sql
 SELECT
 DoctorID,
 COUNT(*) AS TotalRecords
@@ -107,7 +107,7 @@ ORDER BY DoctorID ASC;
 What is the average duration of insurance coverage for patients covered by each insurance company?
 Sample table:Insurance Table
 
-```
+```sql
 SELECT
 InsuranceCompany,
 ABS(AVG(StartDate-EndDate)) AS AvgCoverageDurationDays
@@ -124,7 +124,7 @@ GROUP BY InsuranceCompany;
 How many medical records are there for each patient?
 Sample table:MedicalRecords Table
 
-```
+```sql
 SELECT
 PatientID,
 COUNT(*) AS TotalRecords
@@ -142,7 +142,7 @@ ORDER BY PatientID;
 Write the SQL query that achieves the grouping of data by age, calculates the minimum income for each age group, and includes only those age groups where the minimum income is less than 1,000,000.
 Sample table: employee
 
-```
+```sql
 SELECT
 age,
 MIN(income) AS Income
@@ -160,7 +160,7 @@ HAVING MIN(income)<1000000;
 Write the SQL query that accomplishes the grouping of data by joining date (jdate), calculates the average work hours for each date, and excludes dates where the average work hour is not less than 10.
 Sample table: employee1
 
-```
+```sql
 SELECT
 jdate,
 AVG(workhour) AS "AVG(workhour)"
@@ -178,7 +178,7 @@ HAVING AVG(workhour)<10;
 Write the SQL query that achieves the selection of product names and the maximum price for each category from the "products" table, and includes only those products where the maximum price is greater than 15.
 Sample table: products
 
-```
+```sql
 SELECT
 category_id,
 product_name,
