@@ -279,9 +279,9 @@ ALTER TABLE customer RENAME COLUMN city TO location;
 
 ![image](https://github.com/user-attachments/assets/961e9d0e-6678-4219-9a50-3a006947a518)
 
+## Grade:
 
-
-
+![Screenshot 2025-05-10 100830](https://github.com/user-attachments/assets/16a9bcba-9b5e-45e8-8af9-7c1abef97f5e)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
