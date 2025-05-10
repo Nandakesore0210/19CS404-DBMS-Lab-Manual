@@ -210,5 +210,9 @@ HAVING AVG(price) BETWEEN 10 AND 15;
 
 ![image](https://github.com/user-attachments/assets/cbae2ed5-e6eb-41b4-a4d2-aea7847693a7)
 
+## Grade:
+
+![Screenshot 2025-05-10 100902](https://github.com/user-attachments/assets/efe3fd54-d92e-4317-bfe8-ae6d9e58a32c)
+
 ## RESULT
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
